@@ -1,0 +1,187 @@
+import scala.io.StdIn.{readLine,readDouble,readInt}
+
+// 1)
+def Main():Unit = {
+	val name:String = readLine("Enter the name : ")
+	println("Hi " + name)
+}
+
+// 2)
+def SumOf2Num():Unit = {
+	println("Enter the 2 numbers :")
+	val x:Double = readDouble()
+	val y:Double = readDouble()
+	var sum:Double = x + y
+	println("Sum of " + x + " and " + y + " is " + sum)
+}
+
+// 3)
+def Main2():Unit = {
+	println("Enter an integer :")
+	val i:Int = readInt()
+	if(i%2==0) {
+		Square(i)
+	} else {
+		Cube(i)
+	}
+}
+
+def Square(x:Int):Unit = {
+	println(x*x)
+}
+
+def Cube(x:Int):Unit = {
+	println(x*x*x)
+}
+
+// 4)
+def SimpleInterest():Unit = {
+	println("Enter p , r and t values :")
+	val p:Double = readDouble()
+	val r:Double = readDouble()
+	val t:Double = readDouble()
+	var si = (p * r * t) / 100
+	println("Simple Interest = " + si)
+}
+
+// 5)
+def checkNum1():Unit = {
+	val isfive:Int = readLine("Enter a number : ").toInt
+	if (isfive == 5) {
+		println("Your number is 5")
+	} else {
+		if (isfive == 6) {
+			println("Your number is 6")
+		} else {
+			println("Your number is not 5 or 6")
+		}
+	}
+}
+
+// 6)
+def checkNum2():Unit = {
+	val isfive:Int = readLine("Enter a number : ").toInt
+	if (isfive == 5 || isfive == 6) println("Your number is a 5 or 6")
+	else println("Your number is not 5 or 6")
+}
+
+// 7)
+def checkNum3():Unit = {
+	val isfive:Int = readLine("Enter a number : ").toInt
+	if (isfive != 5 && isfive != 6) println("Your number is not 5 or 6")
+}
+
+// 8) changed the question as suitable
+def color():Unit = {
+	println("Please enter a number")
+	val colornum:Int = readInt()
+	colornum match {
+		case x if (x <= 0) => println("not a correct color option")
+		case x if (x <= 10) => println("RED")
+		case x if (x <= 20) => println("GREEN")
+		case x if (x <= 30) => println("BLUE")
+		case _ => println("not a correct color option")
+	}
+}
+
+// 9)
+def maxmin():Unit = {
+	val usrIn:Array[String] = readLine("Please enter 5 numbers split using spaces : ").split(" ")
+	val n:Array[Int] = usrIn.map(x => x.toInt)
+	print("The average is ")
+	val avg:Double = (n(0) + n(1) + n(2) + n(3) + n(4))/5.0
+	println(avg)
+	
+	var max:Int = 0
+	if (n(0) < n(1)) max=n(1)
+	else max=n(0)
+	if (n(2) > max) max=n(2)
+	if (n(3) > max) max=n(3)
+	if (n(4) > max) max=n(4)
+	println("The max is " + max)
+	
+	var min:Int = 0
+	if (n(0) > n(1)) min=n(1)
+	else min=n(0)
+	if (n(2) < min) min=n(2)
+	if (n(3) < min) min=n(3)
+	if (n(4) < min) min=n(4)
+	println("The min is " + min)
+}
+
+// 10)
+def sort3num(n1:Int,n2:Int,n3:Int):Unit = {
+	if (n1 < n2){
+		if(n2 < n3) println(n1+","+n2+","+n3)
+		else {
+			if (n3 < n1) println(n3+","+n1+","+n2)
+			else println(n1+","+n3+","+n2)
+		}
+	} else {
+		if (n1 < n3) println(n2+","+n1+","+n3)
+		else {
+			if (n3 < n2) println(n3+","+n2+","+n1)
+			else println(n2+","+n3+","+n1)
+		}
+	}
+}
+
+// 11)
+var choice:Int = 0
+var area:Double = 0
+var r:Int = 0
+var l:Int = 0
+var w:Int = 0
+var b:Int = 0
+var h:Int = 0
+
+def areaOfCircle():Unit = {
+	println("Input radious of the circle : ")
+	r = readInt()
+	area = 3.14 * r * r
+	println("The area is : " + area)
+}
+
+def areaOfRect():Unit = {
+	println("Input length and width of the rectangle : ")
+	l = readInt()
+	w = readInt()
+	area = l * w
+	println("The area is : " + area)
+}
+
+def areaOfTri():Unit = {
+	println("Input the base and height of the triangle : ")
+	b = readInt()
+	h = readInt()
+	area = 0.5 * b * h
+	println("The area is : " + area)
+}
+
+def findArea():Unit = {
+	println("Input 1 for area of circle.")
+	println("Input 2 for area of rectangle.")
+	println("Input 3 for area of triangle.")
+	println("Input your choice : ")
+	choice = readInt()
+	
+	choice match {
+		case x if (x==1) => areaOfCircle()
+		case x if (x==2) => areaOfRect()
+		case x if (x==3) => areaOfTri()
+		case _ => println("The area is : " + area)
+	}
+}
+
+// call to the functions
+Main()
+SumOf2Num()
+Main2()
+SimpleInterest()
+checkNum1()
+checkNum2()
+checkNum3()
+color()
+maxmin()
+sort3num(10,22,13)
+findArea()

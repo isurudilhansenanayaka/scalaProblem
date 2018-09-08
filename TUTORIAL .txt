@@ -1,0 +1,49 @@
+1.
+
+2. val n:String=io.StdIn.readLine()
+	
+  var a=n.reverse
+  a.toInt
+
+
+3. 
+
+
+4.def T20predict(runRate:Double=0,overs:Double=0):Unit=
+ { var aOvers=overs*10.0/6
+	var curScore= runRate*aOvers
+  var remainO= 20-aOvers
+	var atNow=runRate*20
+	var at7=7*remainO+curScore
+	var at8=8*remainO+curScore
+	var at9=9*remainO+curScore
+	println("at current rate: "+atNow.toInt)
+	println("at 7:"+at7.toInt)
+	println("at 8:"+at8.toInt)
+	println("at 9:"+at9.toInt)
+}
+
+5.def printName(firstName:String = "Unknown", lastName:String = "Unknown") {
+ System.out.format("Your name is %s %s\n", firstName, lastName)
+}
+
+
+printName("Lakindu","Akash")
+printName(firstName="Lakindu")
+printName(lastName"Akash")
+
+6.
+def time(): Long = {
+ System.nanoTime
+ }
+ def exec(t: Long)= {
+ println("Current time is " + t)
+ }
+ exec(time())
+
+first function is defined to calculate nanoTime and second function is to Display a long value.
+
+the function calling exec(time()) call time() functin as the parameter and pass it to second funtion .Then
+it prints the value from first function.
+
+

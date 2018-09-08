@@ -1,0 +1,11 @@
+var x=new Array[Int](8)
+x(0)=12
+x(1)=23
+x(2)=2
+x(3)=67
+x(4)=1
+x(5)=19
+x(6)=99
+x(7)=81
+
+x.reduceLeft(_ max _)

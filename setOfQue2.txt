@@ -1,0 +1,68 @@
+var x=scala.io.StdIn.readInt()
+print(x)
+
+
+def check(x:Int)={
+       var L:Int=3
+       for (i<-0 to 11){
+           var x=(i)
+           if (x%2==0){
+           var z=x/2
+           }
+           else{
+               var z=(3*x)+2
+           }
+           L=L+(3*x)+2
+           print(L)
+           }
+     }
+     
+       
+       
+
+check("1234")
+//var x=scala.io.stdIn.readInt()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

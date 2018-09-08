@@ -1,0 +1,6 @@
+def j(n:Int)={
+var a=n/2
+var b=(n+1)/2
+if (a==b) print("even")
+else print("odd")
+}

@@ -1,0 +1,34 @@
+//1
+def j(n:Int)={
+var a=n/2
+var b=(n+1)/2
+if (a==b) print("even")
+else print("odd")
+}
+
+//2
+import scala.collection.mutable.ListBuffer
+def bin(n:Int)={
+var p=n
+var b=new ListBuffer[String]()
+var a=0
+while(p>0){
+    a=p%2
+    p=p%2
+    var q=a.toString
+    b+=q
+    }
+var c=b.toList
+var k=c.reverse
+for(i<-k) print(i)
+}
+
+
+//3
+def f(a:List[Any],b:List[Any]){
+for(i<-a){
+for(j<-b){
+       if(i==j) println(i)
+       }
+     }
+}
